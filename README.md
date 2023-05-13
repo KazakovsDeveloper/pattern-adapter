@@ -1,6 +1,6 @@
 # pattern-adapter
 
-![](диаграмма адаптер.png)
+![](src/main/resources/диаграмма адаптер.png)
 
 Класс MatrixAdapter использует объекты, реализующие интерфейс MatrixGenerator, для генерации матриц.
 Конструктор класса MatrixAdapter принимает объект, реализующий интерфейс MatrixGenerator.
