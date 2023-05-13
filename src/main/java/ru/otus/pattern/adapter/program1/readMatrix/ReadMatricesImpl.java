@@ -1,6 +1,6 @@
 package ru.otus.pattern.adapter.program1.readMatrix;
 
-import ru.otus.pattern.adapter.program1.model.Matrix;
+import ru.otus.pattern.adapter.program1.model.MatrixP1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,12 +9,12 @@ import java.util.Scanner;
 public class ReadMatricesImpl implements ReadMatrices {
 
     @Override
-    public Matrix readMatrix() {
+    public MatrixP1 readMatrix() {
         try (Scanner scanner = new Scanner(
                 new File(this.getClass().getClassLoader().getResource("matrices.txt").getFile()))) {
             int[][] matrix = getMatrix(scanner);
             int[][] matrix2 = getMatrix(scanner);
-            return new Matrix(matrix, matrix2);
+            return new MatrixP1(matrix, matrix2);
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Файл с матрицами не найден");
         }

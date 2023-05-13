@@ -1,16 +1,16 @@
 package ru.otus.pattern.adapter.program1.sumMatrix;
 
-import ru.otus.pattern.adapter.program1.model.Matrix;
+import ru.otus.pattern.adapter.program1.model.MatrixP1;
 
 import static java.util.Objects.nonNull;
 
 public class SumMatricesImpl implements SumMatrices {
 
     @Override
-    public int[][] sumMatrices(Matrix matrix) {
-       if (nonNull(matrix.getMatrix1()) && nonNull(matrix.getMatrix2())) {
-           int[][] matrix1 = matrix.getMatrix1();
-           int[][] matrix2 = matrix.getMatrix2();
+    public int[][] sumMatrices(MatrixP1 matrixP1) {
+       if (nonNull(matrixP1.getMatrix1()) && nonNull(matrixP1.getMatrix2())) {
+           int[][] matrix1 = matrixP1.getMatrix1();
+           int[][] matrix2 = matrixP1.getMatrix2();
            if (matrix1.length != matrix2.length || matrix1[0].length != matrix2[0].length) {
                throw new IllegalArgumentException("Размерности матриц не совпадают");
            }

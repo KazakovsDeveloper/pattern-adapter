@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-class WriteMatrixToFileTest {
+class WriteMatrixToFileTestP1P2 {
 
     private WriteMatrixToFile writeMatrixToFile = new WriteMatrixToFileImpl();
 

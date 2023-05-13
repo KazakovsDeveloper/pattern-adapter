@@ -1,6 +1,6 @@
 package ru.otus.pattern.adapter.program1;
 
-import ru.otus.pattern.adapter.program1.model.Matrix;
+import ru.otus.pattern.adapter.program1.model.MatrixP1;
 import ru.otus.pattern.adapter.program1.readMatrix.ReadMatrices;
 import ru.otus.pattern.adapter.program1.sumMatrix.SumMatrices;
 import ru.otus.pattern.adapter.program1.writeMatrix.WriteMatrixToFile;
@@ -21,8 +21,8 @@ public class StartApp {
 
     public void startProgram1() {
         try {
-            Matrix matrix = readMatrices.readMatrix();
-            int[][] ints = sumMatrices.sumMatrices(matrix);
+            MatrixP1 matrixP1 = readMatrices.readMatrix();
+            int[][] ints = sumMatrices.sumMatrices(matrixP1);
             writeMatrixToFile.writeMatrix(ints);
         } catch (Exception e) {
             e.printStackTrace();

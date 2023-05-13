@@ -3,7 +3,7 @@ package ru.otus.pattern.adapter.program1.sumMatrix;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import ru.otus.pattern.adapter.program1.model.Matrix;
+import ru.otus.pattern.adapter.program1.model.MatrixP1;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class SumMatricesTest {
 
     private SumMatrices sumMatrices;
-    private Matrix matrix;
+    private MatrixP1 matrixP1;
 
     @BeforeAll
     public void init() {
@@ -21,12 +21,12 @@ class SumMatricesTest {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-        matrix = new Matrix(matrix1, matrix1);
+        matrixP1 = new MatrixP1(matrix1, matrix1);
     }
 
     @Test
     public void sumMatricesTestShouldSuccess() {
-        int[][] ints = sumMatrices.sumMatrices(matrix);
+        int[][] ints = sumMatrices.sumMatrices(matrixP1);
 
         int[][] expected = {
                 {2, 4, 6},
